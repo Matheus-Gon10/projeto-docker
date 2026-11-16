@@ -20,7 +20,7 @@ def soma():
         b = float(request.args["b"])
     except (KeyError, ValueError):
         return jsonify(erro="Informe os parâmetros numéricos 'a' e 'b'"), 400
-    return jsonify(resultado=a - b)
+    return jsonify(resultado=a + b)
 
 
 if __name__ == "__main__":
