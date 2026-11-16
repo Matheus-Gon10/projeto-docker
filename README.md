@@ -55,24 +55,12 @@ Os testes verificam que `/` e `/health` respondem corretamente, que `/soma` calc
 
 ## Evidência da aplicação funcionando
 
-> Pendente: salvar uma captura de tela das respostas da aplicação executada em contêiner e adicioná-la ao repositório (por exemplo, em `docs/evidencia.png`). A captura deve mostrar as chamadas e respostas de `/`, `/health` e `/soma`.
+![Aplicação funcionando no Docker](docs/evidencia.png)
 
 ## Experimento de falha na CI
 
-Para registrar o experimento exigido:
+- **Execução com erro:** [ver execução que falhou](https://github.com/Matheus-Gon10/projeto-docker/actions/runs/43782713652/job/133023320804?pr=1)
 
-1. Em uma branch de trabalho, altere temporariamente a soma em `app.py` de `a + b` para `a - b`.
-2. Abra um Pull Request com essa alteração e aguarde a execução da CI. O teste de `test_soma_valida` deve falhar, pois recebe `-1` em vez de `5`.
-3. Registre o link dessa execução com erro abaixo.
-4. Corrija a operação para `a + b`, sem remover ou enfraquecer os testes, e envie a correção ao mesmo Pull Request.
-5. Registre o link da execução aprovada abaixo.
+- **Execução após a correção:** [ver execução aprovada](https://github.com/Matheus-Gon10/projeto-docker/actions/runs/43783215884/job/133024940907?pr=1)
 
-- **Erro introduzido:** a rota `/soma` subtrai os valores (`a - b`) em vez de somá-los.
-- **Causa da falha:** `test_soma_valida` espera `5` para os parâmetros `a=2` e `b=3`, mas recebe `-1`.
-- **Execução com erro:** pendente — inserir o link da execução na aba Actions.
-- **Correção:** restaurar `a + b`; manter os testes existentes.
-- **Execução após a correção:** pendente — inserir o link da execução aprovada na aba Actions.
 
-## Publicação
-
-> Pendente: publicar este projeto em um repositório GitHub e substituir os campos pendentes acima pelos links e pela evidência reais.
