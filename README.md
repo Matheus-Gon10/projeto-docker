@@ -55,7 +55,7 @@ Os testes verificam que `/` e `/health` respondem corretamente, que `/soma` calc
 
 ## Evidência da aplicação funcionando
 
-![Aplicação funcionando no Docker](docs/evidencia.png)
+![Aplicação funcionando no Docker](docs/Evidencia.png)
 
 ## Experimento de falha na CI
 
